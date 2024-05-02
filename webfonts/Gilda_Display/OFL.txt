@@ -1,4 +1,4 @@
-Copyright (c) 2013-2016 Abhaya Libre Project Authors (https://github.com/mooniak/abhaya-libre-font).
+Copyright 2012 The Gilda Display Project Authors (https://github.com/etunni/gilda-display) with Reserved Font Name 'Gilda'.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
