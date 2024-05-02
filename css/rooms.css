@@ -1,0 +1,128 @@
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* start banner-header */
+.banner-header {
+  min-height: calc(70vh - 100px);
+  background-image: url("../images/slider-2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+}
+.banner-header .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 40%);
+}
+.banner-header .container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 111;
+}
+.banner-header .rate .icon {
+  color: #fac031;
+  margin-bottom: 5px;
+}
+.banner-header .rate p {
+  color: white;
+  font-size: 18px;
+}
+.banner-header h1 {
+  font-family: "Gilda Display", serif;
+  color: white;
+  font-size: 50px;
+}
+/* start rooms */
+.rooms {
+  padding-top: 100px;
+  background-color: #f4f5f8;
+}
+.rooms .container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.rooms .room {
+  display: flex;
+  position: relative;
+}
+.rooms .room .img {
+  width: 50%;
+}
+.rooms .room img {
+  max-width: 100%;
+  /* height: auto; */
+}
+.rooms .room .caption {
+  background-color: #fff;
+  /* position: absolute;
+  top: 50%;
+  transform: translateY(-50%); */
+  width: 50%;
+  padding: 30px;
+  /* height: 300px; */
+}
+.rooms .room .caption h3 {
+  color: #2095ae;
+}
+.rooms .room .caption h3 span {
+  font-size: 15px;
+  color: black;
+  font-weight: 200;
+}
+.rooms .room .caption h4 {
+  font-family: "Gilda Display", serif;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+.rooms .room .caption .room-facilities {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 30px;
+}
+.rooms .room .caption .room-facilities::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(32, 149, 174, 0.7);
+  bottom: 0;
+  left: 0;
+}
+.rooms .room .caption .info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.rooms .room .caption .info-wrapper .more {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+.rooms .room .caption .info-wrapper .butn-dark a {
+  font-weight: 400;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  background: #2095ae;
+  color: #fff;
+  padding: 15px 30px;
+  margin: 0;
+  position: relative;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+/* end rooms */

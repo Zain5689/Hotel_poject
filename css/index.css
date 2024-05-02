@@ -10,8 +10,3 @@
   src: url("../webfonts/Barlow_Condensed/BarlowCondensed-Light.ttf")
     format(truetype);
 }
-
-h1 {
-  font-family: "Gilda Display", serif;
-  font-family: "Barlow Condensed", sans-serif;
-}
