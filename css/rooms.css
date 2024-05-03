@@ -1,3 +1,8 @@
+:root {
+  --main-color: #2095ae;
+  --black-color: #fff;
+  --main-transition: 0.4s;
+}
 ul {
   list-style: none;
 }
@@ -6,7 +11,7 @@ a {
 }
 /* start banner-header */
 .banner-header {
-  min-height: calc(70vh - 100px);
+  min-height: calc(80vh - 100px);
   background-image: url("../images/slider-2.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -21,7 +26,7 @@ a {
   left: 0;
   background-color: rgb(0 0 0 / 40%);
 }
-.banner-header .container {
+.banner-header .container .content {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -34,12 +39,12 @@ a {
   margin-bottom: 5px;
 }
 .banner-header .rate p {
-  color: white;
+  color: var(--black-color);
   font-size: 18px;
 }
 .banner-header h1 {
   font-family: "Gilda Display", serif;
-  color: white;
+  color: var(--black-color);
   font-size: 50px;
 }
 /* start rooms */
@@ -73,7 +78,7 @@ a {
   /* height: 300px; */
 }
 .rooms .room .caption h3 {
-  color: #2095ae;
+  color: var(--main-color);
 }
 .rooms .room .caption h3 span {
   font-size: 15px;
@@ -97,7 +102,7 @@ a {
   width: 100%;
   height: 1px;
   background-color: rgba(32, 149, 174, 0.7);
-  bottom: 0;
+  bottom: -15px;
   left: 0;
 }
 .rooms .room .caption .info-wrapper {
@@ -116,13 +121,26 @@ a {
   font-weight: 400;
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
-  background: #2095ae;
+  background: var(--main-color);
   color: #fff;
   padding: 15px 30px;
   margin: 0;
   position: relative;
   font-size: 15px;
   letter-spacing: 3px;
+  /* overflow: hidden; */
 }
-
+/* .rooms .room .caption .info-wrapper .butn-dark a span {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.rooms .room .caption .info-wrapper .butn-dark a:hover span {
+  background: #fac031;
+  width: 100%;
+} */
 /* end rooms */
