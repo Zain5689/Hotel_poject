@@ -24,7 +24,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgb(0 0 0 / 40%);
+  background-color: rgb(0 0 0 / 20%);
 }
 .banner-header .container .content {
   display: flex;
@@ -61,23 +61,30 @@ a {
   display: flex;
   position: relative;
 }
-.rooms .room .img {
-  width: 50%;
+@media (max-width: 991px) {
+  .rooms .room {
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+  }
+}
+@media (max-width: 991px) {
+  .rooms .room .img {
+    width: 100%;
+  }
+  .rooms .room .caption {
+    width: 100%;
+  }
 }
 .rooms .room img {
   max-width: 100%;
-  /* height: auto; */
 }
 .rooms .room .caption {
   background-color: #fff;
-  /* position: absolute;
-  top: 50%;
-  transform: translateY(-50%); */
-  width: 50%;
   padding: 30px;
-  /* height: 300px; */
 }
 .rooms .room .caption h3 {
+  font-size: 25px;
+  font-weight: bold;
   color: var(--main-color);
 }
 .rooms .room .caption h3 span {
