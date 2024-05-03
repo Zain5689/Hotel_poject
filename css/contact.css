@@ -1,0 +1,157 @@
+.contact {
+  background-image: url("../images/slider-4.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: calc(80vh - 100px);
+  position: relative;
+}
+.contact .overlay {
+  position: absolute;
+  background-color: rgb(0 0 0 / 20%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.contact .content {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 100%;
+  padding: 40px;
+  width: 50%;
+}
+.contact .content h4 {
+  color: #fff;
+  font-size: 15px;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+.contact .content h1 {
+  color: #fff;
+  font-size: 60px;
+  font-family: "Gilda Display", serif;
+  font-weight: 400;
+  line-height: 1.9;
+  margin: 0 0 20px 0;
+}
+
+/* End Contact */
+.contact-book {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.contact-book .content {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+@media (max-width: 991px) {
+  .contact-book .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.contact-book .content h3 {
+  font-family: "Gilda Display", serif;
+  font-weight: 400;
+  line-height: 1.25em;
+  margin: 0 0 20px 0;
+  color: #0f2454;
+}
+.contact-book .content .info {
+  width: 48%;
+}
+@media (max-width: 991px) {
+  .contact-book .content .info {
+    width: 100%;
+  }
+}
+.contact-book .content .info p {
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.9em;
+  color: #676977;
+  margin-bottom: 20px;
+}
+.contact-book .content .icon {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contact-book .content .icon .call {
+  font-size: 35px;
+  color: #2095ae;
+  font-weight: normal;
+  margin-right: 20px;
+}
+
+.contact-book .content .icon p {
+  margin-bottom: -10px;
+}
+
+.contact-book .content .icon a {
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  color: #2095ae;
+}
+.contact-book .content .book {
+  width: 47%;
+}
+@media (max-width: 991px) {
+  .contact-book .content .book {
+    width: 100%;
+  }
+}
+.contact-book .content .book input {
+  padding: 20px;
+  border: 0;
+  width: 48%;
+  border-bottom: 1px solid #2095ae;
+  margin-right: 1%;
+  outline: 0;
+}
+@media (max-width: 500px) {
+  .contact-book .content .book input {
+    width: 100%;
+  }
+}
+.contact-book .content .book textarea {
+  width: 100%;
+  padding: 30px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #2095ae;
+  margin-bottom: 30px;
+}
+.contact-book .content .book input::placeholder,
+.contact-book .content .book textarea::placeholder {
+  font-family: "Barlow", sans-serif;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.contact-book .content .book a {
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  background: #2095ae;
+  color: #fff;
+  padding: 15px 30px;
+  margin: 0;
+  position: relative;
+  font-size: 15px;
+}
+
+.contact-book .content .book a:hover {
+  opacity: 0.8;
+}

@@ -223,7 +223,7 @@ a {
 .landing::before {
   content: "";
   position: absolute;
-  background: #09153238;
+  background-color: rgb(0 0 0 / 20%);
   width: 100%;
   height: 100%;
   top: 0;
@@ -236,9 +236,13 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  min-width: 500px;
   padding: 40px;
   text-align: center;
+}
+@media (max-width: 767px) {
+  .landing .content {
+    padding: 40px 10px;
+  }
 }
 .landing .content h4 {
   font-size: 15px;
@@ -411,24 +415,31 @@ a {
   display: flex;
   position: relative;
 }
-.rooms .room .img {
-  width: 50%;
+@media (max-width: 991px) {
+  .rooms .room {
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+  }
+}
+@media (max-width: 991px) {
+  .rooms .room .img {
+    width: 100%;
+  }
+  .rooms .room .caption {
+    width: 100%;
+  }
 }
 .rooms .room img {
   max-width: 100%;
-  /* height: auto; */
 }
 .rooms .room .caption {
   background-color: #fff;
-  /* position: absolute;
-  top: 50%;
-  transform: translateY(-50%); */
-  width: 50%;
   padding: 30px;
-  /* height: 300px; */
 }
 .rooms .room .caption h3 {
-  color: #2095ae;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--main-color);
 }
 .rooms .room .caption h3 span {
   font-size: 15px;
@@ -452,7 +463,7 @@ a {
   width: 100%;
   height: 1px;
   background-color: rgba(32, 149, 174, 0.7);
-  bottom: 0;
+  bottom: -15px;
   left: 0;
 }
 .rooms .room .caption .info-wrapper {
@@ -471,13 +482,14 @@ a {
   font-weight: 400;
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
-  background: #2095ae;
+  background: var(--main-color);
   color: #fff;
   padding: 15px 30px;
   margin: 0;
   position: relative;
   font-size: 15px;
   letter-spacing: 3px;
+  /* overflow: hidden; */
 }
 /* End Rooms */
 /* Start video */
