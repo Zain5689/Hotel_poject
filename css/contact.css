@@ -139,19 +139,40 @@
 }
 
 .contact-book .content .book a {
-  line-height: 1.5;
-  font-weight: 400;
-  letter-spacing: 2px;
+  font-size: 15px;
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
-  background: #2095ae;
-  color: #fff;
-  padding: 15px 30px;
-  margin: 0;
+  text-align: center;
   position: relative;
-  font-size: 15px;
+  font-weight: 400;
+  padding: 15px 20px;
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 3px;
+  background-color: #2095ae;
+  transition: 0.3s ease all;
+  text-decoration: none;
+  z-index: 1;
 }
-
+.contact-book .content .book a::before {
+  content: "";
+  position: absolute;
+  transition: 0.3s ease all;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  background-color: #fff;
+  border: 1px solid #2095ae;
+  z-index: -1;
+}
 .contact-book .content .book a:hover {
-  opacity: 0.8;
+  color: #2095ae;
+}
+.contact-book .content .book a:hover::before {
+  transition: 0.3s ease all;
+  left: 0;
+  right: 0;
+  opacity: 1;
 }

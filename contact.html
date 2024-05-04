@@ -97,12 +97,23 @@
           </div>
           <div class="book">
             <h3>Get in touch</h3>
-            <input type="text" placeholder="Your Name *" />
-            <input type="email" placeholder="Your Email *" />
-            <input type="text" placeholder="Your Phone *" />
-            <input type="text" placeholder="Subject *" />
-            <textarea placeholder="Message *"></textarea>
-            <a href="#">send Message</a>
+            <form action="">
+              <input type="text" placeholder="Your Name *" id="name" />
+              <input type="email" placeholder="Your Email *" id="email" />
+              <input type="text" placeholder="Your Phone *" id="Phone" />
+              <input type="text" placeholder="Subject *" id="subject" />
+              <textarea placeholder="Message *" id="message"></textarea>
+            
+              <a href="#" onclick="sendMail()">Send Message</a>
+            
+              <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+              
+              <script type="text/javascript">
+                (function(){
+                  emailjs.init("l72A6_MBOczp3X_RC");
+                })();
+              </script>
+            </form>
           </div>
         </div>
       </div>
@@ -218,5 +229,7 @@
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/contacts.js"></script>
+
   </body>
 </html>

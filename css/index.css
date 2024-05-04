@@ -43,6 +43,7 @@ ul {
 a {
   text-decoration: none;
 }
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -270,32 +271,43 @@ a {
     font-size: 40px;
   }
 }
-.landing .content a {
+.landing .content button {
+  font-size: 15px;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
   position: relative;
   font-weight: 400;
   padding: 15px 20px;
-  font-family: "Barlow Condensed", sans-serif;
-  text-transform: uppercase;
+  display: inline-block;
   color: #fff;
-  font-size: 15px;
   letter-spacing: 3px;
   border: 2px solid var(--black-color);
-  overflow: hidden;
   background: transparent;
-}
-.landing .content a::after {
-  content: "";
-  width: 0;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  transition: 0.3s ease all;
+  text-decoration: none;
   z-index: 1;
+}
+.landing .content button::before {
+  content: "";
+  position: absolute;
+  transition: 0.3s ease all;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
   background-color: #fff;
+  z-index: -1;
+}
+.landing .content button:hover {
   color: #000;
 }
-.landing .content a:hover + a::after {
-  width: 100%;
+.landing .content button:hover::before {
+  transition: 0.3s ease all;
+  left: 0;
+  right: 0;
+  opacity: 1;
 }
 
 /* Start About Page */
@@ -483,7 +495,7 @@ a {
   font-weight: 400;
   letter-spacing: 3px;
 }
-.rooms .room .caption .info-wrapper .butn-dark a {
+/* .rooms .room .caption .info-wrapper .butn-dark a {
   font-weight: 400;
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
@@ -494,8 +506,45 @@ a {
   position: relative;
   font-size: 15px;
   letter-spacing: 3px;
-  /* overflow: hidden; */
+} */
+
+.rooms .room .caption .info-wrapper .butn-dark a {
+  font-weight: 400;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 15px 30px;
+  margin: 0;
+  position: relative;
+  font-size: 15px;
+  display: inline-block;
+  transition: 0.3s ease all;
+  z-index: 1;
 }
+.rooms .room .caption .info-wrapper .butn-dark a::before {
+  content: "";
+  position: absolute;
+  transition: 0.3s ease all;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+  z-index: -1;
+}
+.rooms .room .caption .info-wrapper .butn-dark a:hover {
+  color: var(--main-color);
+}
+.rooms .room .caption .info-wrapper .butn-dark a:hover::before {
+  transition: 0.3s ease all;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
 /* End Rooms */
 /* Start video */
 .video {
@@ -644,15 +693,38 @@ a {
   font-weight: 400;
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
-  background: var(--main-color);
+  background-color: var(--main-color);
   color: #fff;
   padding: 15px 30px;
+  margin: 0;
+  position: relative;
   font-size: 15px;
-  letter-spacing: 3px;
-  border: none;
+  display: inline-block;
+  transition: 0.3s ease all;
+  border: 0;
+  z-index: 1;
+}
+.services .content .service .text button::before {
+  content: "";
+  position: absolute;
+  transition: 0.3s ease all;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+  z-index: -1;
 }
 .services .content .service .text button:hover {
-  opacity: 0.8;
+  color: var(--main-color);
+}
+.services .content .service .text button:hover:before {
+  transition: 0.3s ease all;
+  left: 0;
+  right: 0;
+  opacity: 1;
 }
 
 .services .content .service img {
@@ -674,7 +746,7 @@ a {
   background-image: url("../images/slider-1.jpg");
   background-size: cover;
   background-attachment: fixed;
-  height: 70vh;
+  height: 82vh;
   position: relative;
 }
 .clients .overlay {
@@ -689,13 +761,12 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
   width: 100%;
-  min-width: 500px;
   padding: 40px;
   text-align: center;
-  width: 50%;
 }
+
 .clients .content h2 {
   font-family: "Barlow Condensed", sans-serif;
   color: #fff;
@@ -710,13 +781,31 @@ a {
   color: #fff;
   margin-bottom: 15px;
 }
+.clients .content p {
+  width: 60%;
+  margin: 0 auto;
+}
 .clients .content img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
 }
-.clients .hide {
-  display: none;
+.clients .clie {
+  width: 120px;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 20px;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+
+.clients .clie::-webkit-scrollbar {
+  width: 0;
+}
+.clients .clie .client {
+  padding: 0 20px;
 }
 .clients span {
   display: block;
@@ -751,8 +840,24 @@ a {
   color: #fff;
   margin-bottom: 20px;
 }
-.active {
-  display: block;
+.clients .content .span {
+  position: absolute;
+  display: flex;
+  align-items: end;
+  right: 33px;
+  bottom: -179px;
+}
+.clients .content .span span {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.dot {
+  background-color: #fff;
 }
 /* End clients */
 /* Start facilities */
@@ -991,7 +1096,7 @@ a {
   background-color: var(--main-color);
   color: var(--black-color);
 }
-.books .content .book form a {
+/* .books .content .book form a {
   display: block;
   text-align: center;
   padding: 0;
@@ -1009,7 +1114,50 @@ a {
   transition: all 0.3s ease-out;
   letter-spacing: 3px;
   text-transform: uppercase;
+} */
+.books .content .book form a {
+  width: 100%;
+  font-weight: 400;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  background-color: var(--main-color);
+  color: #fff;
+  margin-top: 15px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  padding: 15px 30px;
+  margin: 0;
+  position: relative;
+  font-size: 15px;
+  display: inline-block;
+  transition: 0.3s ease all;
+  border: 0;
+  top: 20px;
+  z-index: 1;
 }
+.books .content .book form a::before {
+  content: "";
+  position: absolute;
+  transition: 0.3s ease all;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+  z-index: -1;
+}
+.books .content .book form a:hover {
+  color: var(--main-color);
+}
+.books .content .book form a:hover:before {
+  transition: 0.3s ease all;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
 /* end Book */
 /* start footer */
 footer {
