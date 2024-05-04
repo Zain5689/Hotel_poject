@@ -38,5 +38,69 @@
 }
 /* end news-head */
 /* start news */
-
+.news {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f4f5f8;
+}
+.news .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 10px;
+  row-gap: 100px;
+}
+.news .box {
+  position: relative;
+  transition: var(--main-transition);
+}
+.news .box .img {
+  overflow: hidden;
+}
+.news .box img {
+  max-width: 100%;
+  transition: var(--main-transition);
+}
+.news .box:hover img {
+  transform: scale(1.2);
+}
+.news .box .date {
+  position: absolute;
+  background-color: var(--main-color);
+  color: var(--black-color);
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  top: 10px;
+  left: 10px;
+}
+.news .box .date p {
+  margin: 0;
+}
+.news .box .content {
+  width: 90%;
+  background-color: white;
+  margin: auto;
+  padding: 10px;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--main-transition);
+}
+.news .box .content h4 {
+  font-size: 18px;
+  color: var(--main-color);
+}
+.news .box .content p {
+  font-size: 25px;
+  font-family: "Gilda Display", serif;
+  line-height: 1.4;
+  transition: var(--main-transition);
+}
+.news .box:hover .content {
+  bottom: 30px;
+}
+.news .box .content:hover p {
+  color: var(--main-color);
+}
 /* end news */
