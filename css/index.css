@@ -421,13 +421,8 @@ a {
     /* flex-wrap: wrap; */
   }
 }
-@media (max-width: 991px) {
-  .rooms .room .img {
-    width: 100%;
-  }
-  .rooms .room .caption {
-    width: 100%;
-  }
+.rooms .room .img {
+  width: 50%;
 }
 .rooms .room img {
   max-width: 100%;
@@ -435,6 +430,15 @@ a {
 .rooms .room .caption {
   background-color: #fff;
   padding: 30px;
+  width: 50%;
+}
+@media (max-width: 991px) {
+  .rooms .room .img {
+    width: 100%;
+  }
+  .rooms .room .caption {
+    width: 100%;
+  }
 }
 .rooms .room .caption h3 {
   font-size: 25px;
