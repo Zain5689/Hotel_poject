@@ -433,6 +433,7 @@ a {
   max-width: 100%;
 }
 .rooms .room .caption {
+  width: 100%;
   background-color: #fff;
   padding: 30px;
 }
@@ -595,6 +596,7 @@ a {
   }
 }
 .services .content .service {
+  position: relative;
   width: 100%;
   background-color: #f4f5f8;
 }
@@ -648,12 +650,17 @@ a {
 .services .content .service .text button:hover {
   opacity: 0.8;
 }
+
 .services .content .service img {
   max-width: 100%;
   transition: var(--main-transition);
 }
-.services .content .service img:hover {
-  transform: rotate(1deg);
+.services .content .service .img {
+  transition: var(--main-transition);
+  overflow: hidden;
+}
+.services .content .service:hover img {
+  transform: scale(1.1);
 }
 /* End Services */
 /* Start clients */
