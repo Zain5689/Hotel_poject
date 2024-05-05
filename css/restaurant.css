@@ -1,0 +1,156 @@
+:root {
+  --main-color: #2095ae;
+  --black-color: #fff;
+  --main-transition: 0.4s;
+}
+.land {
+  background-image: url("../images/restorant-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: calc(100vh - 75px);
+  position: relative;
+  margin-bottom: 100px;
+  transition: background-image 0.5s ease;
+}
+.land .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 20%);
+}
+/* start Description */
+.description {
+  margin-bottom: 100px;
+}
+.description .rate i {
+  color: #fac031;
+}
+.description .rate p {
+  margin-top: 10px;
+  color: var(--main-color);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.description .content {
+  margin-bottom: 30px;
+}
+.description .content h1 {
+  font-family: "Gilda Display", serif;
+  font-size: 50px;
+}
+.description .content p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #676977;
+
+  line-height: 1.75em;
+}
+.description .hours {
+  margin-bottom: 30px;
+}
+.description .hours h2 {
+  font-family: "Gilda Display", serif;
+  font-size: 25px;
+}
+.description .hours ul li {
+  margin-bottom: 10px;
+  color: #676977;
+  font-size: 16px;
+}
+.description .hours ul li .icon {
+  margin-right: 15px;
+  color: var(--main-color);
+}
+.description .code {
+  margin-bottom: 30px;
+}
+.description .code h2 {
+  font-family: "Gilda Display", serif;
+  font-size: 25px;
+}
+.description .code p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #676977;
+}
+.description .Terrace h2 {
+  font-family: "Gilda Display", serif;
+  font-size: 25px;
+}
+.description .Terrace p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #676977;
+}
+/* end Description */
+/* start menu */
+.menu {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  background-color: #0f2454;
+}
+.menu h4 {
+  text-align: center;
+  color: var(--main-color);
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.menu h1 {
+  font-family: "Gilda Display", serif;
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--black-color);
+}
+.menu .categeories {
+  margin-bottom: 40px;
+}
+.menu .categeories ul {
+  display: flex;
+  gap: 60px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.menu .categeories ul::-webkit-scrollbar {
+  width: 0;
+}
+.menu .categeories ul li {
+  font-size: 20px;
+  color: var(--black-color);
+  padding: 10px 80px;
+  transition: var(--main-transition);
+}
+.menu .categeories .active,
+.menu .categeories li:hover {
+  border: 1px solid var(--main-color);
+}
+.menu .boxs .box {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  column-gap: 200px;
+  row-gap: 20px;
+}
+.menu .boxs .box:not(.actives) {
+  display: none;
+}
+.menu .box .actives {
+  display: grid;
+}
+.menu .boxs .box .info {
+}
+.menu .boxs .box .info h3 {
+  border-bottom: 1px dotted var(--main-color);
+  padding-bottom: 10px;
+  color: var(--main-color);
+}
+.menu .boxs .box .info h3 span {
+  float: right;
+  color: var(--black-color);
+}
+.menu .boxs .box .info p {
+  font-size: 18px;
+}
+/* end menu */

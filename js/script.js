@@ -35,7 +35,7 @@ function slideShow() {
   } else {
     i++;
   }
-  setTimeout(slideShow, 5000);
+  setTimeout(slideShow, 3000);
 }
 
 slideShow();
